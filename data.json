@@ -1,0 +1,40 @@
+{
+  "name": "John Doe",
+  "title": "Senior Software Engineer",
+  "profile": "Experienced software engineer with 8+ years of experience in web development. Specialized in JavaScript frameworks and cloud technologies.",
+  "profileImage": "default-profile.png",
+  "contact": [
+    "+1 (555) 123-4567",
+    "john.doe@example.com",
+    "123 Main St, Anytown, USA",
+    "johndoe.dev"
+  ],
+  "education": [
+    "2010-2014 | University of Technology | Bachelor of Computer Science",
+    "2014-2016 | State University | Master of Software Engineering"
+  ],
+  "skills": [
+    "JavaScript",
+    "React",
+    "Node.js",
+    "AWS",
+    "Docker"
+  ],
+  "languages": [
+    "English (Fluent)",
+    "Spanish (Intermediate)"
+  ],
+  "experience": [
+    "2016-Present | Tech Solutions Inc. | Senior Software Engineer",
+    "2014-2016 | WebDev Co. | Junior Developer"
+  ],
+  "references": [
+    {
+      "name": "Jane Smith",
+      "role": "CTO",
+      "company": "Tech Solutions Inc.",
+      "contact": "+1 (555) 987-6543",
+      "email": "jane.smith@techsolutions.com"
+    }
+  ]
+}
