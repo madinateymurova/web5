@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Professional CV</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="cv-container">
+    
+    <div class="cv-sidebar">
+      <div class="profile-section">
+        <img id="profile-img" class="profile-img" src="default-profile.png" alt="Profile Photo" />
+        <input type="file" id="profile-upload" accept="image/*" style="display: none;" />
+        <button onclick="document.getElementById('profile-upload').click()">Change Photo</button>
+      </div>
+
+      <div class="contact-section">
+        <h2 class="section-title">CONTACT</h2>
+        <div id="contact-info"></div>
+        <div class="form-group">
+          <input type="text" id="new-phone" placeholder="Phone number" />
+          <span class="error-message" id="phone-error"></span>
+        </div>
+        <div class="form-group">
+          <input type="text" id="new-email" placeholder="Email" />
+          <span class="error-message" id="email-error"></span>
+        </div>
+        <div class="form-group">
+          <input type="text" id="new-address" placeholder="Address" />
+          <span class="error-message" id="address-error"></span>
+        </div>
+        <div class="form-group">
+          <input type="text" id="new-website" placeholder="Website" />
+          <span class="error-message" id="website-error"></span>
+        </div>
+        <button onclick="addContact()">Add Contact Info</button>
+      </div>
+
+      <div class="education-section">
+        <h2 class="section-title">EDUCATION</h2>
+        <div id="education-info"></div>
+        <div class="form-group">
+          <input type="text" id="new-edu" placeholder="Year - Year | Institution | Degree" />
+          <span class="error-message" id="edu-error"></span>
+        </div>
+        <button onclick="addEducation()">Add Education</button>
+      </div>
+
+      <div class="skills-section">
+        <h2 class="section-title">SKILLS</h2>
+        <div id="skills-info"></div>
+        <div class="form-group">
+          <input type="text" id="new-skill" placeholder="New skill" />
+          <span class="error-message" id="skill-error"></span>
+        </div>
+        <button onclick="addSkill()">Add Skill</button>
+      </div>
+
+      <div class="languages-section">
+        <h2 class="section-title">LANGUAGES</h2>
+        <div id="languages-info"></div>
+        <div class="form-group">
+          <input type="text" id="new-language" placeholder="New language" />
+          <span class="error-message" id="language-error"></span>
+        </div>
+        <button onclick="addLanguage()">Add Language</button>
+      </div>
+    </div>
+
+    <div class="cv-main">
+      <div class="header-section">
+        <div class="form-group">
+          <input type="text" id="name-input" placeholder="Full Name" />
+          <span class="error-message" id="name-error"></span>
+        </div>
+        <div class="form-group">
+          <input type="text" id="title-input" placeholder="Professional Title" />
+          <span class="error-message" id="title-error"></span>
+        </div>
+        <button onclick="saveBasicInfo()">Save Basic Info</button>
+      </div>
+
+      <div class="profile-section">
+        <h2 class="section-title">PROFILE</h2>
+        <p id="profile-text" class="profile-text"></p>
+        <div class="form-group">
+          <textarea id="profile-edit" style="display:none;"></textarea>
+          <span class="error-message" id="profile-error"></span>
+        </div>
+        <button onclick="editProfile()">Edit Profile</button>
+        <button onclick="saveProfile()" style="display:none;" id="save-profile">Save Profile</button>
+      </div>
+
+      <div class="experience-section">
+        <h2 class="section-title">WORK EXPERIENCE</h2>
+        <div id="experience-info"></div>
+        <div class="form-group">
+          <input type="text" id="new-exp" placeholder="Year - Year | Company | Position" />
+          <span class="error-message" id="exp-error"></span>
+        </div>
+        <button onclick="addExperience()">Add Experience</button>
+      </div>
+
+      <div class="references-section">
+        <h2 class="section-title">REFERENCES</h2>
+        <div id="references-info" class="references-grid"></div>
+        <div class="form-group">
+          <input type="text" id="ref-name" placeholder="Name" />
+          <input type="text" id="ref-role" placeholder="Role" />
+          <input type="text" id="ref-company" placeholder="Company" />
+          <input type="text" id="ref-contact" placeholder="Contact" />
+          <input type="text" id="ref-email" placeholder="Email" />
+        </div>
+        <button onclick="addReference()">Add Reference</button>
+      </div>
+
+      <div class="save-section">
+        <button onclick="saveAllData()" class="save-button">Save All Data</button>
+        <button onclick="resetAllData()" class="reset-button">Reset All Data</button>
+        <span id="save-status"></span>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
